@@ -102,7 +102,8 @@ app.get('/api/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/' }),
   (req, res) => {
     // Redirect to frontend after successful login
-    res.redirect('http://localhost:5173/playground');
+    res.redirect(`${process.env.FRONTEND_URL}/playground`);
+
   }
 );
 
@@ -112,7 +113,8 @@ app.get('/api/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     // Redirect to frontend after successful login
-    res.redirect('http://localhost:5173/playground');
+    res.redirect(`${process.env.FRONTEND_URL}/playground`);
+
   }
 );
 
