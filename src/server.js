@@ -20,6 +20,7 @@ const enhanceRouter = require('./routes/enhance');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
 // Apply security-related middleware
 app.use(helmet()); // Set secure HTTP headers
 
