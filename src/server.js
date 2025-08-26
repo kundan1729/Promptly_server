@@ -18,6 +18,8 @@ const enhanceRouter = require('./routes/enhance');
 
 // Initialize Express app
 const app = express();
+// Trust the first proxy (required for Render and express-rate-limit)
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 5000;
 
 
